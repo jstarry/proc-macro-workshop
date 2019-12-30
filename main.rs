@@ -6,4 +6,14 @@
 // To run the code:
 //     $ cargo run
 
+use seq::seq;
+
+seq!(N in 0..4 {
+    compile_error!(concat!("error number ", stringify!(N)));
+});
+
+const blah: () = {
+    let N = 4;
+};
+
 fn main() {}
